@@ -10,10 +10,10 @@ namespace dapper_sqlite
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
             InitSQLiteDb();
             TestInsert();
             TestSelect();
-            Console.Read();
         }
  
         static string dbPath = @".\Test.sqlite";
