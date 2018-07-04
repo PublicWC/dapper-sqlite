@@ -20,7 +20,7 @@ namespace dapper_sqlite
             using (var cn = new SQLiteConnection(cnStr))
             {
                 var builder = new SqlBuilder();
-                var template = builder.AddTemplate("Select * from [Orders] O ");
+                var template = builder.AddTemplate("Select /**select**/ from [Orders] O /**where**/");
                 builder.Select("O.OrderId")
                         .Join("Contacts UC ON UC.UserContactId = O.UserContactId");
 
